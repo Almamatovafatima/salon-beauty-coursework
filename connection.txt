@@ -1,0 +1,1 @@
+Server= (localdb)\MSSQLLocalDB;Database=salon_bea;Trusted_Connection=True;TrustServerCertificate=True;

@@ -1,0 +1,37 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Ktpt.CourseOrder.Views.ServicesView"
+             Tag="Услуга и оформление заказа">
+	<ScrollViewer>
+		<StackPanel Spacing="10" MaxWidth="700" HorizontalAlignment="Left" Margin="20">
+
+			<TextBlock Text="Выберите свободное время:" FontWeight="Bold"/>
+			<ComboBox x:Name="SlotBox" PlaceholderText="Выберите время" HorizontalAlignment="Stretch" />
+
+			<TextBlock x:Name="NameText" Classes="heading" FontSize="24" FontWeight="Bold"/>
+
+			<Image x:Name="CourseImage" Height="150" HorizontalAlignment="Left" Stretch="Uniform" />
+
+			<TextBlock x:Name="DescriptionText" />
+			<TextBlock x:Name="PriceText" FontWeight="Bold" FontSize="18"/>
+
+			<TextBlock Text="Количество мест:" />
+			<TextBox x:Name="QuantityBox" Text="1" Width="160" HorizontalAlignment="Left" />
+
+			<StackPanel x:Name="ClientPanel" Spacing="6">
+				<TextBlock Text="Выберите клиента для оформления записи:" />
+				<ComboBox x:Name="ClientBox" MinWidth="580" />
+			</StackPanel>
+
+			<TextBlock Text="Заказ сохранится только после нажатия «Оформить»." Margin="0,10,0,0"/>
+
+			<StackPanel Orientation="Horizontal" Spacing="10">
+				<Button x:Name="SaveButton" Content="Оформить" Classes="accent" Click="SaveClick" />
+				<Button Content="Обновить карточку" Click="ReloadClick" />
+			</StackPanel>
+		</StackPanel>
+	</ScrollViewer>
+</UserControl>
